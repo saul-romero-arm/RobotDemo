@@ -1,0 +1,17 @@
+metadata:
+  name: Robot Framework Example
+variables:
+  GREETINGS: hello world
+jobs:
+  # Set the job key.  The key is displayed as the job name when
+  # a job name is not provided
+  keyword-driven:
+    runs-on: robotframework
+    steps:
+    - run: echo $GREETINGS
+    - uses: actions/checkout@v2
+      with:
+        repository: https://github.com/saul-romero-arm/RobotDemo.git
+    - uses: robotframework/robot@v1
+      with:
+        datasource: RobotDemo/keyword_driven.robot
