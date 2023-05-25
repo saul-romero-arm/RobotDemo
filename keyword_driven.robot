@@ -14,6 +14,7 @@ Library           CalculatorLibrary.py
 
 *** Test Cases ***
 Push button
+    Sleep 20s
     Push button    1
     Result should be    1
 
